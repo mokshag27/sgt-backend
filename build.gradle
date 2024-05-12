@@ -1,0 +1,31 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '3.1.8'
+	id 'io.spring.dependency-management' version '1.1.4'
+}
+
+group = 'com.citycraftsmen'
+version = '0.0.1-SNAPSHOT'
+
+java {
+	sourceCompatibility = '17'
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	implementation 'org.jetbrains:annotations:20.1.0'
+	implementation 'org.springframework.boot:spring-boot-starter-jdbc:3.2.0'
+	implementation 'com.microsoft.sqlserver:mssql-jdbc:12.4.2.jre11'
+	implementation 'com.razorpay:razorpay-java:1.4.6'
+
+
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
